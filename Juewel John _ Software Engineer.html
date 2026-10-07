@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juewel John | Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF2F6;--surface:#FFFFFF;--ink:#14213D;--muted:#4A5873;--teal:#0B7F82;--amber:#F2B134;--line:#CBD5E1;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1727;--surface:#18233A;--ink:#E8EEF7;--muted:#9FB0C9;--teal:#3CC4C7;--line:#2B3A57}}
+:root[data-theme="dark"]{--bg:#0F1727;--surface:#18233A;--ink:#E8EEF7;--muted:#9FB0C9;--teal:#3CC4C7;--line:#2B3A57}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+.logo{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;color:var(--ink);text-decoration:none}
+nav a{margin-left:20px;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--teal)}
+.hero{padding:56px 0 72px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.hero h1{font-size:clamp(52px,11vw,112px);font-weight:800;letter-spacing:-.03em}
+.hero p.role{font-size:clamp(20px,3vw,26px);margin:20px 0 8px;font-weight:500}
+.hero p.sub{max-width:52ch;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.main{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.capsule{width:120px;height:260px;border-radius:60px;transform:rotate(28deg);background:linear-gradient(to bottom,var(--teal) 50%,var(--amber) 50%);box-shadow:inset 0 0 0 6px rgba(255,255,255,.25)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(30px,5vw,44px);margin-bottom:28px;letter-spacing:-.02em}
+.project{background:var(--surface);border-radius:20px;padding:36px;border-left:10px solid var(--teal)}
+.project+.project{margin-top:24px}
+.project .status{display:inline-block;background:var(--amber);color:#14213D;font-weight:600;font-size:14px;padding:2px 12px;border-radius:999px;margin-left:10px;vertical-align:middle}
+.project h3{font-size:clamp(28px,4vw,38px);margin-bottom:6px}
+.project .tag{color:var(--muted);margin:0 0 20px;font-weight:500}
+.project ul{padding-left:20px;margin:0 0 24px;max-width:62ch}
+.project li{margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--bg);border:1px solid var(--line);padding:4px 14px;border-radius:999px;font-size:15px;font-weight:500}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px}
+.skills h3{font-size:20px;margin-bottom:12px}
+.skills .chips li{background:var(--surface)}
+.timeline{display:grid;gap:28px;max-width:720px}
+.item h3{font-size:22px;margin-bottom:2px}
+.item .when{color:var(--teal);font-weight:600;margin:0 0 6px}
+.item p{margin:0;color:var(--muted)}
+.certs{list-style:none;padding:0;margin:0;display:grid;gap:12px;max-width:720px}
+.certs li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.certs span{color:var(--muted)}
+.contact p{max-width:52ch;color:var(--muted)}
+.contact .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+footer{padding:32px 0;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.capsule{display:none}.project{padding:24px}nav a{margin:0 16px 0 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.btn{transition:transform .15s}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="#top">Juewel John</a>
+<nav aria-label="Sections"><a href="#project">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+<div>
+<h1>Juewel John</h1>
+<p class="role">Software engineering student in Computer Science and Design</p>
+<p class="sub">I build software that solves everyday problems, from healthcare apps to AI tools. I also lead teams: I served as my college's General Secretary.</p>
+<div class="btns">
+<a class="btn main" href="#project">See my projects</a>
+<a class="btn" href="#contact">Get in touch</a>
+</div>
+</div>
+<div class="capsule" aria-hidden="true"></div>
+</div>
+
+<section id="project">
+<h2>Projects</h2>
+<article class="project">
+<h3>MEDD-ZO</h3>
+<p class="tag">AI-powered online consultation and smart medicine comparison system</p>
+<ul>
+<li>Built a platform where patients book doctor appointments online and receive digital prescriptions.</li>
+<li>Added AI-based medicine information and medicine comparison, so patients can understand what they are taking.</li>
+<li>Goal: make healthcare easier to reach and simpler to use for patients.</li>
+</ul>
+<ul class="chips" aria-label="Technologies used"><li>Flutter</li><li>Supabase</li><li>AI</li></ul>
+</article>
+<article class="project">
+<h3>StartLink<span class="status">In progress</span></h3>
+<p class="tag">An intelligent developer portfolio, recruitment, and project marketplace platform</p>
+<ul>
+<li>A single web platform that brings together a developer portfolio, project repository, professional network, recruitment portal, startup collaboration hub, and project marketplace.</li>
+<li>Developers build profiles and upload projects with documentation, source code links, tech stack, images, videos, live demos, and status, so their work acts as their portfolio.</li>
+<li>Companies and startups search for developers by projects and skills, post jobs, hire, or buy projects for commercial use. Investors find promising projects and fund startup ideas.</li>
+<li>Planned features include team formation, messaging, notifications, AI project recommendations, skill matching, project analytics, and secure sign-in.</li>
+<li>Goal: connect innovation, employment, and entrepreneurship, and turn software projects into real career and business opportunities.</li>
+</ul>
+<ul class="chips" aria-label="Focus areas"><li>Web platform</li><li>AI recommendations</li><li>Recruitment</li><li>Marketplace</li></ul>
+</article>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Programming</h3><ul class="chips"><li>Java (intermediate)</li><li>Python (intermediate)</li><li>C (basic)</li></ul></div>
+<div><h3>Web and apps</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Flutter</li></ul></div>
+<div><h3>Working with people</h3><ul class="chips"><li>Leadership</li><li>Teamwork</li><li>Time management</li><li>Problem solving</li><li>Logical thinking</li></ul></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience and leadership</h2>
+<div class="timeline">
+<div class="item">
+<h3>AI with ML and Data Science internship</h3>
+<p class="when">STEM Robotics International, 2 months</p>
+<p>Hands-on work in artificial intelligence, machine learning, data science, Python, and prompt engineering.</p>
+</div>
+<div class="item">
+<h3>General Secretary</h3>
+<p class="when">Viswajyothi College of Engineering and Technology, 2025 to 2026</p>
+<p>Introduced initiatives that had not happened in the college's 25-year history, and worked relentlessly to make them real. Delivered a successful program for students, coordinating with students, staff, and organizers along the way.</p>
+</div>
+<div class="item">
+<h3>Event Coordinator, Tech-Fest 2025</h3>
+<p class="when">2025</p>
+<p>Coordinated technical events as part of the Tech-Fest team and took part in college tech events and workshops.</p>
+</div>
+</div>
+</section>
+
+<section id="certifications">
+<h2>Certifications and workshops</h2>
+<ul class="certs">
+<li>Fundamentals of Digital Marketing <span>August 2023</span></li>
+<li>Flutter Workshop <span>Workshop</span></li>
+<li>Ethical Hacking Workshop <span>Workshop</span></li>
+<li>AI with ML and DS, Python and Prompt Engineering <span>Internship certificate</span></li>
+</ul>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let's talk</h2>
+<p>I'm looking for an internship or entry-level role where I can build real products and keep learning. Send me an email and I'll reply.</p>
+<div class="links">
+<a class="btn main" href="mailto:jessymjohn66@gmail.com">Email me</a>
+<a class="btn" href="https://linkedin.com/in/juewel-j-2b2092215" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/jueweljohn66-debug" rel="noopener">GitHub</a>
+</div>
+</section>
+</main>
+
+<footer>Juewel John, Thodupuzha, Kerala, India</footer>
+</div>
+</body>
+</html>
